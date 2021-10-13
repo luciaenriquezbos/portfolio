@@ -1,6 +1,6 @@
 import { AppBar, Toolbar } from "@material-ui/core";
 import React from "react";
-import logo from "../Images/logo.png";
+import logo from "../Images/logo.jpg";
 import { makeStyles } from "@material-ui/core";
 
 const Navbar = () => {
@@ -22,12 +22,11 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     aIndex: 999,
   },
-  toolbar:{
-    display:"flex",
-    justifyContent:
-
-
-  }
+  toolbar: {
+    display: "flex",
+    justifyContent: "felx-start",
+    alignItems: "center",
+  },
   logo: {
     height: "2rem",
     objectFit: "contain",
