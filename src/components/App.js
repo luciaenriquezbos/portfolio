@@ -13,7 +13,7 @@ const App = () => {
       <About title="About Me" id="about" dark={true} />
       <Skills title="My Coding Jaurney" id="skills" dark={false} />
       <MyWork title="My Work" id="work" dark={true} />
-      <Contact title="Contact" id="contac" dark={false} />
+      <Contact title="Contact" id="contact" dark={false} />
     </div>
   );
 };

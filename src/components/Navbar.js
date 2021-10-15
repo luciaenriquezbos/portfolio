@@ -44,7 +44,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              offset={-70}>
+              offset={-70}
+              activeClass="active">
               {text}
             </Link>
           ))}
