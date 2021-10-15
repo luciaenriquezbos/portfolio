@@ -1,4 +1,10 @@
-import { AppBar, List, makeStyles, Toolbar } from "@material-ui/core";
+import {
+  AppBar,
+  List,
+  makeStyles,
+  Toolbar,
+  IconButton,
+} from "@material-ui/core";
 import React from "react";
 import logo from "../Images/logo.jpg";
 import { Link, animatorScroll as scroll } from "react-scroll";
@@ -6,6 +12,7 @@ import InfoTwoToneIcon from "@material-ui/icons/InfoTwoTone";
 import EmojiObjectsTwoToneIcons from "@material-ui/icons/EmojiObjectsTwoTone";
 import BuildTwoToneIcons from "@material-ui/icons/BuildTwoTone";
 import ContactMailTwoToneIcons from "@material-ui/icons/ContactMailTwoTone";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const links = [
   {
@@ -50,6 +57,9 @@ const Navbar = () => {
             </Link>
           ))}
         </List>
+        <IconButton edge="end" className={classes.menubutton}>
+          <MenuIcon fontSize="large" />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
@@ -84,6 +94,16 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "bold",
       marginLeft: theme.spacing(3),
     },
+    "& a:hover": {
+      cursor: "pointer",
+      color: "#bac03c",
+      borderBottom: "3px solid #bac03c",
+    },
+  },
+  menubutton: {
+    display: "none",
+    backgroundColor: "white",
+    [theme.breakpoints.down("sm")]: { display: "block" },
   },
 }));
 
