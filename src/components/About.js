@@ -1,24 +1,25 @@
 import {
   CardMedia,
   makeStyles,
-  Typography,
   Card,
   CardContent,
+  Button,
+  CardActions,
 } from "@material-ui/core";
 import fotoperfil from "../Images/foto perfil.jpg";
 import TypeWriterEffect from "react-typewriter-effect";
+import pdf from "../Images/CV Lucia Enríquez Bos.pdf";
 
-const About = ({ title, dark, id }) => {
+const About = ({ dark, id }) => {
   const classes = useStyles();
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Typography variant="h3">{title}</Typography>
         <Card className={classes.card}>
           <CardMedia
             image={fotoperfil}
             className={classes.media}
-            tile="picture"
+            title="picture"
           />
           <CardContent className={classes.cardcontent}>
             Lucía Enríquez Bos
@@ -30,10 +31,29 @@ const About = ({ title, dark, id }) => {
                 color: "#bac03c",
               }}
               startDelay={100}
-              cursorColor="grey"
+              cursorColor="#bac03c"
               typeSpeed={100}
             />
+            <TypeWriterEffect
+              text="HTML, CSS3, JAVASCRIPT, REACT, 
+              GRAPHIC DESIGN"
+              textStyle={{
+                lineHeight: "80px",
+                fontSize: "10px",
+                color: "#80807c",
+              }}
+              startDelay={2000}
+              cursorColor="grey"
+              typeSpeed={50}
+            />
           </CardContent>
+          <CardActions>
+            <Button className={classes.pdfbutton} variant="contained">
+              <a href={pdf} download>
+                Download CV
+              </a>
+            </Button>
+          </CardActions>
         </Card>
       </div>
     </div>
@@ -42,7 +62,7 @@ const About = ({ title, dark, id }) => {
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    minHeight: "100vh",
+    minHeight: "50vh",
   },
   sectiondark: {
     background: "#80807c",
@@ -53,19 +73,27 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
   },
   card: {
-    height: "70vh",
+    [theme.breakpoints.down("sm")]: { display: "block" },
+    height: "100vh",
     display: "flex",
-    marginTop: theme.spacing(10),
     boxShadow: "none",
-    position: "relative",
+    //position: "absolute",
   },
-  // media: {
-  //   width: "200px",
-  //   height: "auto",
-  //   obectfit: "cover",
-  // },
+  media: {
+    [theme.breakpoints.down("sm")]: { width: "150px", height: "150px" },
+    marginTop: theme.spacing(4),
+    marginLeft: "20px",
+    width: "200px",
+    height: "200px",
+    obectfit: "cover",
+  },
   cardcontent: {
-    [theme.breakpoints.down("sm")]: { maxWidth: "300px", fontSize: "25px" },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "300px",
+      fontSize: "25px",
+      marginTop: theme.spacing(1),
+    },
+    marginTop: theme.spacing(4),
     fontSize: "40px",
     fontWeight: "bold",
     color: "#80807c",
