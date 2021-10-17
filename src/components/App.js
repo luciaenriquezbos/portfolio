@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Navbar />
-      <About title="About Me" id="about" dark={true} />
+      <About title="About Me" id="about" dark={false} />
       <Skills title="My Coding Jaurney" id="skills" dark={false} />
       <MyWork title="My Work" id="work" dark={true} />
       <Contact title="Contact" id="contact" dark={false} />

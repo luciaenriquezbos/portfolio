@@ -160,13 +160,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   sidebar: {
-    margin: theme.spacing(5, 0, 0, 2),
+    margin: theme.spacing(0, 0, 0, 2),
     width: "40vw",
-    color: "#80807c",
+    color: "#bac03c",
     fontWeight: "bold",
 
     "& :hover": {
-      color: "#bac03c",
+      color: "#80807c",
       cursor: "pointer",
     },
   },
