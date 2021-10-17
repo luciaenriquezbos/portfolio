@@ -22,7 +22,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const classes = useStyles();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const links = [
     {
