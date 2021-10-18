@@ -77,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     display: "flex",
     boxShadow: "none",
-    //position: "absolute",
   },
   media: {
     [theme.breakpoints.down("sm")]: { width: "150px", height: "150px" },
@@ -97,6 +96,27 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "40px",
     fontWeight: "bold",
     color: "#80807c",
+  },
+  pdfbutton: {
+    [theme.breakpoints.down("sm")]: { left: "4px", top: "450px" },
+    position: "absolute",
+    top: "300px",
+    left: "245px",
+    boxShadow: "none",
+    backgroundColor: "white",
+    "&:hover": {
+      boxShadow: "none",
+      backgroundColor: "white",
+    },
+    "& a": {
+      [theme.breakpoints.down("sm")]: { fontSize: "10px" },
+      boxShadow: "none",
+      backgroundColor: "white",
+      color: "#bac03c",
+    },
+    "& a:hover": {
+      color: "#80807c",
+    },
   },
 }));
 
