@@ -5,6 +5,7 @@ import {
   CardContent,
   Button,
   CardActions,
+  Typography,
 } from "@material-ui/core";
 import fotoperfil from "../Images/foto perfil.jpg";
 import TypeWriterEffect from "react-typewriter-effect";
@@ -46,6 +47,19 @@ const About = ({ dark, id }) => {
               cursorColor="grey"
               typeSpeed={50}
             />
+            <Typography className={classes.textsecondary} color="textSecondary">
+              MI BIO PROFESIONAL: Más de 20 años dedicada al diseño y la
+              publicidad, centrada principalmente en creación de marca y
+              contenidos publicitarios. En 2010 entré a formar parte de otro
+              proyecto La Guarida Creativa Coworking, donde compaginaba mis dos
+              pasiones, diseñar y compartir. La primera en la lista de mis
+              aficiones....crear. Dedico mi tiempo a disfrutar, disfruto con mi
+              trabajo y aprendo día a día rodeada de talento en entornos
+              colaborativos. Disfruto en mi tiempo libre, con mi familia y
+              amigos, viajar, conocer cosas nuevas, es lo que más me gusta. Mi
+              nueva meta, crear programando, desarrollar software, trabajar en
+              un entorno inspirador y que me desafíe a mejorar todos los días.
+            </Typography>
           </CardContent>
           <CardActions>
             <Button className={classes.pdfbutton} variant="contained">
@@ -97,11 +111,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     color: "#80807c",
   },
+  textsecondary: {
+    [theme.breakpoints.down("sm")]: { display: "none" },
+    maxWidth: "500px",
+    fontSize: "10px",
+  },
   pdfbutton: {
     [theme.breakpoints.down("sm")]: { left: "4px", top: "450px" },
     position: "absolute",
-    top: "300px",
-    left: "245px",
+    top: "400px",
+    left: "238px",
     boxShadow: "none",
     backgroundColor: "white",
     "&:hover": {
