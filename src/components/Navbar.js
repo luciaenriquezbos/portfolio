@@ -27,22 +27,22 @@ const Navbar = () => {
   const links = [
     {
       id: "about",
-      text: "{about me}",
+      text: "{{about me}}",
       icon: <InfoTwoToneIcon className={classes.ligth2} />,
     },
     {
       id: "skills",
-      text: "{skills}",
+      text: "{{skills}}",
       icon: <EmojiObjectsTwoToneIcons className={classes.ligth} />,
     },
     {
       id: "work",
-      text: "{my work}",
+      text: "{{my work}}",
       icon: <BuildTwoToneIcons className={classes.ligth2} />,
     },
     {
       id: "contact",
-      text: "{contact}",
+      text: "{{contact}}",
       icon: <ContactMailTwoToneIcons className={classes.ligth2} />,
     },
   ];

@@ -76,7 +76,7 @@ const About = ({ dark, id }) => {
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    minHeight: "50vh",
+    minHeight: "100vh",
   },
   sectiondark: {
     background: "#80807c",
