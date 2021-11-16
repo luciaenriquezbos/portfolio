@@ -6,11 +6,13 @@ import iconcreact from "../Images/logoract.png";
 import iconebos from "../Images/logoebos.png";
 import {
   Timeline,
+  TimelineConnector,
+  TimelineContent,
   TimelineItem,
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@material-ui/lab";
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography, Paper } from "@material-ui/core";
 
 const Technologies = () => {
   const classes = useStyles();
@@ -39,7 +41,7 @@ const Technologies = () => {
     {
       skill: "Back",
       src: iconebos,
-      title: "conocimientos básicos de APIs, Node JS, Express y SQL",
+      title: "Conocimientos básicos de APIs, Node JS, Express y SQL",
     },
     {
       skill: " ",
@@ -50,12 +52,12 @@ const Technologies = () => {
       skill: "Desarrollo de proyectos",
       src: iconebos,
       title:
-        "filosofía de proyecto Agile y marco de trabajo Scrum. Dominio herramientas trabajo en remoto",
+        "Filosofía de proyecto Agile y marco de trabajo Scrum. Dominio herramientas trabajo en remoto",
     },
     {
       skill: "Diseño Gráfico",
       src: iconebos,
-      title: "creative suite, wordpress",
+      title: "Creative suite, Wordpress",
     },
   ];
 
@@ -68,7 +70,14 @@ const Technologies = () => {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <img src={src} alt={title} className={classes.customlogo} />
+
+            <TimelineConnector color="white" />
           </TimelineSeparator>
+          <TimelineContent>
+            <Paper elevation={0} className={classes.paper}>
+              <Typography>{title}</Typography>
+            </Paper>
+          </TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>
@@ -77,6 +86,12 @@ const Technologies = () => {
 
 const useStyles = makeStyles((theme) => ({
   customlogo: { width: "25px" },
+  paper: {
+    padding: "6px, 16px",
+    color: "white",
+    background: "#333",
+    maxWidth: "250px",
+  },
 }));
 
 export default Technologies;

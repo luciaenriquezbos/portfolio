@@ -11,9 +11,9 @@ const App = () => {
     <div className={classes.root}>
       <Navbar />
       <About id="about" dark={false} />
-      <Skills title="Skills" id="skills" dark={true} />
-      <MyWork title="My Work" id="work" dark={false} />
-      <Contact title="Contact" id="contact" dark={false} />
+      <Skills title="skills" id="skills" dark={true} />
+      <MyWork title="my Work" id="work" dark={false} />
+      <Contact title="contact" id="contact" dark={false} />
     </div>
   );
 };
