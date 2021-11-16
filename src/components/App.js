@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
       <About id="about" dark={false} />
       <Skills title="skills" id="skills" dark={true} />
-      <MyWork title="my Work" id="work" dark={false} />
+      <MyWork title="my work" id="work" dark={false} />
       <Contact title="contact" id="contact" dark={false} />
     </div>
   );
