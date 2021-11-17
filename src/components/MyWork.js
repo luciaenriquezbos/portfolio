@@ -1,4 +1,13 @@
-import { Card, CardContent, CardMedia, Grid, Link, makeStyles } from "@material-ui/core";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  Link,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import mockData from "./mockData.js";
 
 const MyWork = ({ title, dark, id }) => {
@@ -6,22 +15,27 @@ const MyWork = ({ title, dark, id }) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <Grid container className={classes.grid}>
-          {
-          mockData.map( ({image, link}, index) => (
-            <Grid Item key={ index} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                 <CardMedia/> 
+        <Grid container classsName={classes.grid}>
+          {mockData.map(({ title, description, image, link }, index) => (
+            <Grid Item key={index} xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cover}
+                  image={image}
+                  titulo="cover"
+                />
                 <CardContent>
-                  <Link href={link} color="primary" target="_blank" rel="noopener noreferrer"></Link>
+                  <Link href={link} variant="h8" color="black" target="_blank">
+                    {title}
+                  </Link>
+                  <Typography className={classes.textsecondary}>
+                    {description}
+                  </Typography>
                 </CardContent>
-                
-                </Card>
-
+              </Card>
             </Grid>
-          ))
-          }
-       
+          ))}
+        </Grid>
       </div>
     </div>
   );
@@ -36,9 +50,24 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   sectioncontent: {
-    padding: " 10px",
+    padding: " 30px",
     maxWidth: "90vw",
     margin: "0 auto",
+  },
+  card: {
+    maxWhith: 600,
+    minHeight: 170,
+    margin: theme.spacing(3),
+  },
+  cover: {
+    height: 0,
+    paddingTop: "56.25%",
+  },
+  textsecondary: {
+    [theme.breakpoints.down("sm")]: { display: "none" },
+    maxWidth: "600px",
+    fontSize: "10px",
+    color: "#bac03c",
   },
 }));
 
