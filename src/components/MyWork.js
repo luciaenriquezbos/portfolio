@@ -25,7 +25,7 @@ const MyWork = ({ title, dark, id }) => {
                   titulo="cover"
                 />
                 <CardContent>
-                  <Link href={link} variant="h8" color="black" target="_blank">
+                  <Link className={classes.link} href={link} target="_blank">
                     {title}
                   </Link>
                   <Typography className={classes.textsecondary}>
@@ -68,6 +68,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "600px",
     fontSize: "10px",
     color: "#bac03c",
+  },
+  link: {
+    color: "#80807c",
+
+    "& a:hover": {
+      cursor: "pointer",
+      color: "#80807c",
+      textDecoration: "none",
+    },
   },
 }));
 

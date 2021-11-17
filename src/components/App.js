@@ -11,7 +11,7 @@ const App = () => {
     <div className={classes.root}>
       <Navbar />
       <About id="about" dark={false} />
-      <Skills title="skills" id="skills" dark={true} />
+      <Skills title="{{skills}}" id="skills" dark={true} />
       <MyWork title="my work" id="work" dark={false} />
       <Contact title="contact" id="contact" dark={false} />
     </div>

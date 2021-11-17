@@ -113,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
+    textdecoration: "none",
   },
   logo: {
     [theme.breakpoints.down("sm")]: { height: "1.2rem" },
@@ -134,7 +135,6 @@ const useStyles = makeStyles((theme) => ({
     "& a:hover": {
       cursor: "pointer",
       color: "#bac03c",
-      borderBottom: "3px solid #bac03c",
     },
   },
   ligth: {
