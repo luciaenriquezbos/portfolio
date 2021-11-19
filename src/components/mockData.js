@@ -5,6 +5,7 @@ import showlist from "../Images/dexter.jpg";
 import hidalpromoimage from "../Images/hidalpromo.jpg";
 import laguarida from "../Images/guarida.jpg";
 import onegolf from "../Images/onegolf.jpg";
+import portfolio from "../Images/portfolio.jpg";
 
 const mockData = [
   {
@@ -29,7 +30,7 @@ const mockData = [
     link: "https://github.com/luciaenriquezbos/Buscador-de-series",
   },
   {
-    title: "WEB CATALOG",
+    title: "WEB CATALOGUE",
     description:
       "Catálogo para tienda web. Maquetado en HTML, CSS, Flexbox y Grid. Búsqueda con un fetch de tu serie favorita, con un listado de favoritos",
     image: hidalpromoimage,
@@ -48,6 +49,13 @@ const mockData = [
       "Web y tienda responsive realizada en WordPress y Php. Diseño de página, diseño de la marca, Identidad Corporativa, contenidos, Blog y posicionamiento",
     image: onegolf,
     link: "https://onegolf.es/",
+  },
+  {
+    title: "PORTFOLIO",
+    description:
+      "REACT JS y librería material ui. Diseño de portfolio personal, con los últimos proyectos realizados y con enlaces a código o a dirección correspondientes",
+    image: portfolio,
+    link: "https://github.com/luciaenriquezbos/portfolio",
   },
 ];
 
