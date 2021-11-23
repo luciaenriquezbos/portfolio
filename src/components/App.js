@@ -13,7 +13,7 @@ const App = () => {
       <About id="about" dark={false} />
       <Skills title="{{skills}}" id="skills" dark={true} />
       <MyWork title="my work" id="work" dark={false} />
-      <Contact title="contact" id="contact" dark={true} />
+      <Contact title="{{contact me}}" id="contact" dark={true} />
     </div>
   );
 };

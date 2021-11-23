@@ -4,10 +4,11 @@ import {
   Paper,
   Radio,
   TextField,
+  Button,
 } from "@material-ui/core";
 import { useState } from "react";
 
-const Contact = ({ dark, id }) => {
+const Contact = ({ title, dark, id }) => {
   const classes = useStyles();
   const [value, setValue] = useState("Say Hi");
 
@@ -17,31 +18,31 @@ const Contact = ({ dark, id }) => {
   return (
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
+        <Typography variant="h3">{title}</Typography>
         <Paper className={classes.root}>
-          <div className={classes.titleandhoices}>
-            <Typography variant="h5">CONTACT ME</Typography>
-            <div className={classes.choices}>
-              <spam>Say Hello </spam>
-              <Radio
-                value="Say Hi"
-                checked={value === "Say Hi"}
-                color="primary"
-                onChange={handleChange}
-              />
-              <spam>Send me a chuck's random joke </spam>
-              <Radio
-                value="Send me a Chuck's random joke "
-                checked={value === "Send me a chuck's random joke "}
-                color="primary"
-                onChange={handleChange}
-              />
-            </div>
+          <div className={classes.choices}>
+            <spam>Say Hello </spam>
+            <Radio
+              value="Say Hi"
+              checked={value === "Say Hi"}
+              color="#bac03c"
+              onChange={handleChange}
+            />
+            <spam>Chuck's random joke </spam>
+            <Radio
+              value="Joke"
+              checked={value === "Joke"}
+              color="#bac03c"
+              onChange={handleChange}
+            />
           </div>
           <form className={classes.form}>
-            <TextField label="Your name"></TextField>
-            <TextField label="Your e-mail"></TextField>
-            <TextField label="Write a message"></TextField>
+            <TextField label="Your name" />
+            <TextField label="Your e-mail" />
+            <TextField label="Write a message" />
+            {value === "Joke" ? <TextField label="Chuck Norris Joke" /> : null}
           </form>
+          <Button variant="contained">Submit</Button>
         </Paper>
       </div>
     </div>
@@ -59,6 +60,30 @@ const useStyles = makeStyles((theme) => ({
   sectioncontent: {
     maxWidth: "90vw",
     margin: "0 auto",
+    paddingTop: "20px",
+  },
+
+  root: {
+    maxWidth: "500px",
+    color: "#bac03c",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    // alignItems: "center",
+    margin: "20px",
+    padding: "20px",
+    "& button": {
+      backgroundColor: "#bac03c",
+      fontWeith: 900,
+      fontSize: "1.1rem",
+    },
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "30px",
   },
 }));
 
