@@ -9,9 +9,9 @@ import {
   ListItem,
   ListItemIcon,
 } from "@material-ui/core";
-import React from "react";
+
 import logo from "../Images/logo.jpg";
-import { Link, animatorScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import InfoTwoToneIcon from "@material-ui/icons/InfoTwoTone";
 import EmojiObjectsTwoToneIcons from "@material-ui/icons/EmojiObjectsTwoTone";
 import BuildTwoToneIcons from "@material-ui/icons/BuildTwoTone";
@@ -46,11 +46,21 @@ const Navbar = () => {
       icon: <ContactMailTwoToneIcons className={classes.ligth2} />,
     },
   ];
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <AppBar position="sticky" className={classes.root}>
         <Toolbar className={classes.toolbar}>
-          <img src={logo} className={classes.logo} alt="Logo" />
+          <img
+            src={logo}
+            className={classes.logo}
+            alt="Logo"
+            onClick={scrollToTop}
+          />
           <List className={classes.menu}>
             {links.map(({ id, text }, index) => (
               <Link

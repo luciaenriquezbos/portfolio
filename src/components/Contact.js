@@ -28,7 +28,7 @@ const Contact = ({ title, dark, id }) => {
               color="#bac03c"
               onChange={handleChange}
             />
-            <spam>Chuck's random joke </spam>
+            <spam>Chuck's joke </spam>
             <Radio
               value="Joke"
               checked={value === "Joke"}
@@ -69,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    // alignItems: "center",
     margin: "20px",
     padding: "20px",
     "& button": {
@@ -81,8 +80,6 @@ const useStyles = makeStyles((theme) => ({
   form: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
     padding: "30px",
   },
 }));
