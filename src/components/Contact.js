@@ -37,12 +37,29 @@ const Contact = ({ title, dark, id }) => {
             />
           </div>
           <form className={classes.form}>
-            <TextField label="Your name" />
-            <TextField label="Your e-mail" />
-            <TextField label="Write a message" />
+            <TextField type="text" name="name" label="Your name" />
+            <TextField type="email" name="email" label="Your e-mail" />
+            <TextField name="message" label="Your message" />
+
+            {/* <label>Name</label>
+            <input type="text" name="name" />
+
+            <label>Email</label>
+            <input type="email" name="user_email" />
+
+            <label>Write a message</label>
+            <textarea name="message" rows="3" /> */}
+
             {value === "Joke" ? <TextField label="Chuck Norris Joke" /> : null}
+
+            <Button
+              className={classes.button}
+              type="submit"
+              value="Send"
+              variant="contained">
+              Submit
+            </Button>
           </form>
-          <Button variant="contained">Submit</Button>
         </Paper>
       </div>
     </div>
@@ -81,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "30px",
+  },
+  button: {
+    marginTop: "30px",
   },
 }));
 
