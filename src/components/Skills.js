@@ -7,7 +7,7 @@ const Skills = ({ title, dark, id }) => {
     <div className={`${classes.section} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
         <Typography variant="h3">{title}</Typography>
-        <Technologies />
+        <Technologies className={classes.timeline} />
       </div>
     </div>
   );
@@ -22,9 +22,12 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   sectioncontent: {
-    padding: " 10px",
-    maxWidth: "90vw",
-    margin: "0 auto",
+    maxWidth: "500px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    margin: "20px",
+    padding: "20px",
   },
 }));
 
