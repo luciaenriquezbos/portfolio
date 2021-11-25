@@ -94,14 +94,18 @@ const useStyles = makeStyles((theme) => ({
     color: "#bac03c",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: "center",
     margin: "20px",
-    padding: "20px",
+    paddingTop: "20px",
+
     "& button": {
       backgroundColor: "#bac03c",
       fontWeith: 900,
       fontSize: "1.1rem",
     },
+  },
+  choices: {
+    margin: "0 auto",
   },
   form: {
     display: "flex",
