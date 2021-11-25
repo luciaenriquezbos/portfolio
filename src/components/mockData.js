@@ -32,7 +32,7 @@ const mockData = [
   {
     title: "WEB CATALOGUE",
     description:
-      "Catálogo para tienda web. Maquetado en HTML, CSS, Flexbox y Grid. Búsqueda con un fetch de tu serie favorita, con un listado de favoritos",
+      "Catálogo para tienda web. Maquetado en HTML, CSS, Flexbox y Grid. La aplicación personaliza el catálogo por productos selecionados",
     image: hidalpromoimage,
     link: "https://github.com/luciaenriquezbos/hidalpromo",
   },

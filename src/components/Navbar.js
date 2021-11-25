@@ -171,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
 
   sidebar: {
     margin: theme.spacing(0, 0, 0, 2),
-    width: "40vw",
+    width: "60vw",
     color: "#bac03c",
     fontWeight: "bold",
 
