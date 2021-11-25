@@ -19,11 +19,13 @@ const MyWork = ({ title, dark, id }) => {
           {mockData.map(({ title, description, image, link }, index) => (
             <Grid Item key={index} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cover}
-                  image={image}
-                  titulo="cover"
-                />
+                <Link className={classes.link} href={link} target="_blank">
+                  <CardMedia
+                    className={classes.cover}
+                    image={image}
+                    titulo="cover"
+                  />
+                </Link>
                 <CardContent>
                   <Link className={classes.link} href={link} target="_blank">
                     {title}
