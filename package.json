@@ -1,6 +1,6 @@
 {
   "name": "tema03",
-  "homepage": "https://ebos.es/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

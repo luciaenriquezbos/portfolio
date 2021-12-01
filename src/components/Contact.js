@@ -55,9 +55,9 @@ const Contact = ({ title, dark, id }) => {
             />
           </div>
           <form className={classes.form} onSubmit={sendEmail}>
-            <TextField type="text" name="name" label="Your name" />
-            <TextField type="email" name="email" label="Your e-mail" />
-            <TextField name="message" label="Your message" />
+            <TextField type="text" name="name" label="Your name" required />
+            <TextField type="email" name="email" label="Your e-mail" required />
+            <TextField name="message" label="Your message" required />
 
             {value === "Joke" ? <TextField label="Chuck Norris Joke" /> : null}
 
